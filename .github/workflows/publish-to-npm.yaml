@@ -1,7 +1,7 @@
 name: Release components package
 on:
-  push:
-    branches: ["main"]
+  release:
+    types: [published]
   workflow_dispatch:
 concurrency:
   group: "publish-npm"
