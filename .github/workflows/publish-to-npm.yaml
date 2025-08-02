@@ -8,6 +8,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   build:
+    environment: deploy_npm
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
