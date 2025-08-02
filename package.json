@@ -1,6 +1,6 @@
 {
   "name": "components",
-  "private": true,
+  "private": false,
   "version": "0.1.1",
   "type": "module",
   "main": "dist/main.js",
