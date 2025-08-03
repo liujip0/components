@@ -11,6 +11,9 @@ importers:
       '@eslint/js':
         specifier: ^9.30.1
         version: 9.32.0
+      '@material-symbols/font-400':
+        specifier: ^0.33.0
+        version: 0.33.0
       '@types/node':
         specifier: ^24.1.0
         version: 24.1.0
@@ -448,6 +451,9 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.29':
     resolution: {integrity: sha512-uw6guiW/gcAGPDhLmd77/6lW8QLeiV5RUTsAX46Db6oLhGaVj4lhnPwb184s1bkc8kdVg/+h988dro8GRDpmYQ==}
+
+  '@material-symbols/font-400@0.33.0':
+    resolution: {integrity: sha512-1Ofq3c31kedy+hhUoR7FsYuPU8gHB1ssGm9M/tanuFs3rlygUmJa130+fOlVI5sMTOfIitRaYKiWy3qGXd91Hg==}
 
   '@microsoft/api-extractor-model@7.30.7':
     resolution: {integrity: sha512-TBbmSI2/BHpfR9YhQA7nH0nqVmGgJ0xH0Ex4D99/qBDAUpnhA2oikGmdXanbw9AWWY/ExBYIpkmY8dBHdla3YQ==}
@@ -1873,6 +1879,8 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.4
+
+  '@material-symbols/font-400@0.33.0': {}
 
   '@microsoft/api-extractor-model@7.30.7(@types/node@24.1.0)':
     dependencies:
