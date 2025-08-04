@@ -1,4 +1,5 @@
 import "./main.css";
+export default "./main.css";
 
 // ./Button
 export { Button } from "./components/Button/Button.tsx";
