@@ -5,11 +5,11 @@
   padding: 6px;
 
   border: none;
-  color: var(--color-primary);
-  background-color: var(--color-background);
+  color: var(--color-primary, var(--color-primary-fallback));
+  background-color: var(--color-background, var(--color-background-fallback));
   cursor: pointer;
   clip-path: circle(50%);
 }
 .button:hover {
-  filter: var(--hover-dim);
+  filter: var(--hover-dim, var(--hover-dim-fallback));
 }

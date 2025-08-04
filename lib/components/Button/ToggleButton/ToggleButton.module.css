@@ -1,11 +1,15 @@
 .buttonFalse {
-  color: var(--color-primary);
-  border: var(--button-border-width) solid var(--color-primary);
-  background-color: var(--color-background);
+  color: var(--color-primary, var(--color-primary-fallback));
+  border: var(--border-width, var(--border-width-fallback)) solid
+    var(--color-primary, var(--color-primary-fallback));
+  background-color: var(--color-background, var(--color-background-fallback));
 }
 
 .buttonTrue {
-  color: var(--color-primary-contrastText);
+  color: var(
+    --color-primary-contrastText,
+    var(--color-primary-contrastText-fallback)
+  );
   border: none;
-  background-color: var(--color-primary);
+  background-color: var(--color-primary, var(--color-primary-fallback));
 }

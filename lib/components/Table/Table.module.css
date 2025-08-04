@@ -1,37 +1,43 @@
 .table {
-  --table-cell-padding: 8px;
-  --table-border-width: 3px;
-  --table-cell-border-width: 2px;
-
   border-collapse: separate;
-  border: var(--table-border-width) solid var(--color-primary);
+  border: var(--table-border-width, var(--table-border-width-fallback)) solid
+    var(--color-primary, var(--color-primary-fallback));
   border-spacing: 0;
 }
 
 .tableHead {
   position: sticky;
-  top: var(--table-cell-border-width);
+  top: var(--table-cell-border-width, var(--table-cell-border-width-fallback));
   z-index: 1;
 
-  background-color: var(--color-background);
-  outline: var(--table-cell-border-width) solid var(--color-primary);
+  background-color: var(--color-background, var(--color-background-fallback));
+  outline: var(
+      --table-cell-border-width,
+      var(--table-cell-border-width-fallback)
+    )
+    solid var(--color-primary, var(--color-primary-fallback));
 }
 
 .th {
-  padding: var(--table-cell-padding);
+  padding: var(--table-cell-padding, var(--table-cell-padding-fallback));
 
-  font-family: var(--text-font-family);
-  font-size: var(--text-body-size);
+  font-family: var(--text-font-family, var(--text-font-family-fallback));
+  font-size: var(--text-body-size, var(--text-body-size-fallback));
   font-weight: bold;
   border-style: solid;
-  border-color: var(--color-primary);
-  border-width: var(--table-border-width) var(--table-cell-border-width);
+  border-color: var(--color-primary, var(--color-primary-fallback));
+  border-width: var(--table-border-width, var(--table-border-width-fallback))
+    var(--table-cell-border-width, var(--table-cell-border-width-fallback));
 }
 
 .td {
-  padding: var(--table-cell-padding);
+  padding: var(--table-cell-padding, var(--table-cell-padding-fallback));
 
-  font-family: var(--text-font-family);
-  font-size: var(--text-body-size);
-  border: var(--table-cell-border-width) solid var(--color-primary);
+  font-family: var(--text-font-family, var(--text-font-family-fallback));
+  font-size: var(--text-body-size, var(--text-body-size-fallback));
+  border: var(
+      --table-cell-border-width,
+      var(--table-cell-border-width-fallback)
+    )
+    solid var(--color-primary, var(--color-primary-fallback));
 }

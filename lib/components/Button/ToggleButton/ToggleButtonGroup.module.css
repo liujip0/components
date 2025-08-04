@@ -9,16 +9,16 @@
 }
 
 .label {
-  font-family: var(--text-font-family);
-  font-size: var(--text-label-size);
+  font-family: var(--text-font-family, var(--text-font-family-fallback));
+  font-size: var(--text-label-size, var(--text-label-size-fallback));
 }
 
 .helperText {
   margin: 4px 8px;
 
-  font-family: var(--text-font-family);
-  font-size: 0.75em;
-  color: var(--color-primary);
+  font-family: var(--text-font-family, var(--text-font-family-fallback));
+  font-size: var(--text-helperText-size, var(--text-helperText-size-fallback));
+  color: var(--color-primary, var(--color-primary-fallback));
 }
 .helperTextError {
   color: var(--color-error);

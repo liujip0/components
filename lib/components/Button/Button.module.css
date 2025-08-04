@@ -2,14 +2,14 @@
   min-width: 64px;
   padding: 6px 16px;
   border: none;
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius, var(--border-radius-fallback));
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 4px;
 
   font-size: 1.25rem;
-  font-family: var(--text-font-family);
+  font-family: var(--text-font-family, var(--text-font-family-fallback));
   text-transform: uppercase;
   font-weight: 500;
   line-height: 1.75;
@@ -18,5 +18,5 @@
   cursor: pointer;
 }
 .button:hover {
-  filter: var(--hover-dim);
+  filter: var(--hover-dim, var(--hover-dim-fallback));
 }

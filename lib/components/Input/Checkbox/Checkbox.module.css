@@ -5,7 +5,7 @@
 }
 
 .label {
-  font-family: var(--text-font-family);
-  font-size: var(--text-body-size);
+  font-family: var(--text-font-family, var(--text-font-family-fallback));
+  font-size: var(--text-body-size, var(--text-body-size-fallback));
   cursor: pointer;
 }

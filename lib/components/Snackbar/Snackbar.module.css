@@ -7,15 +7,19 @@
   padding: 8px 16px;
   align-items: center;
   max-width: 500px;
-  z-index: var(--z-index-snackbar);
+  z-index: var(--z-index-snackbar, var(--z-index-snackbar-fallback));
 
-  background-color: var(--color-paper-background);
-  border: var(--button-border-width) solid var(--color-primary);
-  border-radius: var(--border-radius);
+  background-color: var(--color-paper, var(--color-paper-fallback));
+  border: var(--border-width, var(--border-width-fallback)) solid
+    var(--color-primary, var(--color-primary-fallback));
+  border-radius: var(--border-radius, var(--border-radius-fallback));
 }
 
 .message {
-  font-family: var(--text-font-family);
-  font-size: var(--text-label-size);
-  color: var(--color-paper-background-contrastText);
+  font-family: var(--text-font-family, var(--text-font-family-fallback));
+  font-size: var(--text-label-size, var(--text-label-size-fallback));
+  color: var(
+    --color-paper-contrastText,
+    var(--color-paper-contrastText-fallback)
+  );
 }

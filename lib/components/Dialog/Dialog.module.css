@@ -10,7 +10,7 @@
 
   /* TODO: make var */
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: var(--z-index-modal);
+  z-index: var(--z-index-modal, var(--z-index-modal-fallback));
 }
 
 .dialog {
@@ -20,16 +20,17 @@
   flex-direction: column;
   padding: 24px;
 
-  background-color: var(--color-paper-background);
-  border-radius: var(--border-radius);
-  border: var(--button-border-width) solid var(--color-primary);
+  background-color: var(--color-paper, var(--color-paper-fallback));
+  border-radius: var(--border-radius, var(--border-radius-fallback));
+  border: var(--border-width, var(--border-width-fallback)) solid
+    var(--color-primary, var(--color-primary-fallback));
 }
 
 .dialogTitle {
   margin-bottom: 16px;
 
-  font-family: var(--text-font-family);
-  font-size: var(--text-h2-size);
+  font-family: var(--text-font-family, var(--text-font-family-fallback));
+  font-size: var(--text-h2-size, var(--text-h2-size-fallback));
 }
 
 .dialogContent {

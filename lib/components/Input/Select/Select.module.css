@@ -12,11 +12,11 @@
 
   border-width: 1px;
   border-style: solid;
-  border-color: var(--color-primary);
-  border-radius: var(--border-radius);
+  border-color: var(--color-primary, var(--color-primary-fallback));
+  border-radius: var(--border-radius, var(--border-radius-fallback));
 }
 .errorOutline {
-  border-color: var(--color-error);
+  border-color: var(--color-error, var(--color-error-fallback));
 }
 
 .select {
@@ -26,29 +26,40 @@
 
   border: none;
   background-color: transparent;
-  color: var(--color-background-contrastText);
-  font-family: var(--text-font-family);
-  font-size: var(--text-body-size);
+  color: var(
+    --color-background-contrastText,
+    var(--color-background-contrastText-fallback)
+  );
+  font-family: var(--text-font-family, var(--text-font-family-fallback));
+  font-size: var(--text-body-size, var(--text-body-size-fallback));
 }
 .select:focus {
   outline: none;
 }
 .selectDisabled {
-  color: color-mix(in srgb, var(--color-background-contrastText) 50%, #888);
+  color: color-mix(
+    in srgb,
+    var(
+        --color-background-contrastText,
+        var(--color-background-contrastText-fallback)
+      )
+      50%,
+    #888
+  );
 }
 
 .helperText {
   margin: 4px 8px;
 
-  font-family: var(--text-font-family);
-  font-size: 0.75em;
-  color: var(--color-primary);
+  font-family: var(--text-font-family, var(--text-font-family-fallback));
+  font-size: var(--text-helperText-size, var(--text-helperText-size-fallback));
+  color: var(--color-primary, var(--color-primary-fallback));
 }
 .helperTextError {
-  color: var(--color-error);
+  color: var(--color-error, var(--color-error-fallback));
 }
 
 .label {
-  font-family: var(--text-font-family);
-  font-size: var(--text-label-size);
+  font-family: var(--text-font-family, var(--text-font-family-fallback));
+  font-size: var(--text-label-size, var(--text-label-size-fallback));
 }

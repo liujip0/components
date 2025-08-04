@@ -39,6 +39,7 @@ export { Snackbar } from "./components/Snackbar/Snackbar.tsx";
 export { Table, TableHead, Td, Th } from "./components/Table/Table.tsx";
 
 // ./Tabs
+export { Tab } from "./components/Tabs/Tab.tsx";
 export { TabBar } from "./components/Tabs/TabBar.tsx";
 export { Tabs } from "./components/Tabs/Tabs.tsx";
 

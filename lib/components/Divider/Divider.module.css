@@ -1,7 +1,7 @@
 .divider {
   border-width: 0.5px;
   border-style: solid;
-  border-color: var(--color-primary);
+  border-color: var(--color-primary, var(--color-primary-fallback));
   margin: 8px;
 }
 

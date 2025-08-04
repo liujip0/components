@@ -1,3 +1,36 @@
+:root {
+  --text-font-family-fallback: sans-serif;
+  --text-body-size-fallback: 1em;
+  --text-h1-size-fallback: 2em;
+  --text-h2-size-fallback: 1.5em;
+  --text-label-size-fallback: 0.9em;
+  --text-helperText-size-fallback: 0.75em;
+
+  --color-primary-fallback: blue;
+  --color-primary-contrastText-fallback: white;
+  --color-secondary-fallback: orange;
+  --color-secondary-contrastText-fallback: white;
+  --color-background-fallback: white;
+  --color-background-contrastText-fallback: black;
+  --color-paper-fallback: gray;
+  --color-paper-contrastText-fallback: black;
+  --color-error-fallback: red;
+
+  --z-index-backdrop-fallback: 99;
+  --z-index-snackbar-fallback: 100;
+  --z-index-modal-fallback: 101;
+  --z-index-tooltip-fallback: 102;
+
+  --border-radius-fallback: 0;
+  --border-width-fallback: 1px;
+  --input-height-fallback: calc(37.6px + 8px);
+  --hover-dim-fallback: brightness(0.8);
+
+  --table-cell-padding-fallback: 8px;
+  --table-border-width-fallback: 3px;
+  --table-cell-border-width-fallback: 2px;
+}
+
 .material-symbols-outlined {
   font-variation-settings: "FILL" 1;
 }

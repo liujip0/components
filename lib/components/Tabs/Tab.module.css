@@ -1,0 +1,18 @@
+.tab {
+  padding: 0.5em;
+
+  cursor: pointer;
+  color: var(--color-primary, var(--color-primary-fallback));
+  font-family: var(--text-font-family, var(--text-font-family-fallback));
+  font-size: var(--text-body-size, var(--text-body-size-fallback));
+  text-transform: uppercase;
+  font-weight: 500;
+  background-color: var(--color-background, var(--color-background-fallback));
+}
+.tab:hover {
+  filter: var(--hover-dim, var(--hover-dim-fallback));
+}
+.activeTab {
+  font-weight: 700;
+  border-bottom: 4px solid var(--color-primary, var(--color-primary-fallback));
+}

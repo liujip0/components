@@ -4,17 +4,24 @@
 }
 
 .button {
-  height: var(--input-height);
-  width: var(--input-height);
+  height: var(--input-height, var(--input-height-fallback));
+  width: var(--input-height, var(--input-height-fallback));
   min-width: 0;
   min-height: 0;
 
-  background-color: var(--color-primary);
-  color: var(--color-primary-contrastText);
+  background-color: var(--color-primary, var(--color-primary-fallback));
+  color: var(
+    --color-primary-contrastText,
+    var(--color-primary-contrastText-fallback)
+  );
   border: none;
 }
 .buttonDisabled {
-  background-color: color-mix(in srgb, var(--color-primary) 50%, #888);
+  background-color: color-mix(
+    in srgb,
+    var(--color-primary, var(--color-primary-fallback)) 50%,
+    #888
+  );
   cursor: default;
 }
 .buttonDisabled:hover {
