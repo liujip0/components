@@ -2,49 +2,64 @@ import styles from "./Input.module.css";
 
 type InputProps = {
   value: string | number;
-  onChange?: (event: string) => void;
+  onChange?: (value: string) => void;
   type?: "text" | "password" | "email" | "number" | "search";
   id: string;
-  onKeyDown?: (event: React.KeyboardEvent<HTMLInputElement>) => void;
   startIcon?: React.ReactNode;
   endIcon?: React.ReactNode;
-  placeholder?: string;
   label?: string;
   error?: boolean;
   helperText?: string;
   disabled?: boolean;
   className?: string;
-};
+  outlineClassName?: string;
+  labelClassName?: string;
+  helperTextClassName?: string;
+  inputClassName?: string;
+} & React.InputHTMLAttributes<HTMLInputElement>;
 export function Input({
   value,
   onChange,
   type = "text",
   id,
-  onKeyDown,
   startIcon,
   endIcon,
-  placeholder,
   label,
   error,
   helperText,
   disabled,
   className,
+  outlineClassName,
+  labelClassName,
+  helperTextClassName,
+  inputClassName,
+  ...props
 }: InputProps) {
   return (
     <div className={styles.container + " " + (className || "")}>
       {label && (
         <label
           htmlFor={id}
-          className={styles.label}>
+          className={styles.label + " " + (labelClassName || "")}>
           {label}
         </label>
       )}
       <div
-        className={styles.outline + " " + (error ? styles.errorOutline : "")}>
+        className={
+          styles.outline +
+          " " +
+          (outlineClassName || "") +
+          " " +
+          (error ? styles.errorOutline : "")
+        }>
         {startIcon}
         <input
           className={
-            styles.input + " " + (disabled ? styles.inputDisabled : "")
+            styles.input +
+            " " +
+            (inputClassName || "") +
+            " " +
+            (disabled ? styles.inputDisabled : "")
           }
           value={value}
           onChange={(event) => {
@@ -54,16 +69,19 @@ export function Input({
           }}
           type={type}
           id={id}
-          onKeyDown={onKeyDown}
-          placeholder={placeholder}
           disabled={disabled}
+          {...props}
         />
         {endIcon}
       </div>
       {helperText && (
         <p
           className={
-            styles.helperText + " " + (error ? styles.helperTextError : "")
+            styles.helperText +
+            " " +
+            (helperTextClassName || "") +
+            " " +
+            (error ? styles.helperTextError : "")
           }>
           {helperText}
         </p>
