@@ -3,31 +3,54 @@ import { Input } from "../Input.tsx";
 import styles from "./Counter.module.css";
 
 type CounterProps = {
-  value: number;
   id: string;
+  value: number;
   increment: () => void;
   decrement: () => void;
-  label: string;
+  min?: number;
   max?: number;
+
+  label: string;
+
   disabled?: boolean;
-};
+
+  className?: string;
+  buttonClassName?: string;
+  inputClassName?: string;
+} & Omit<
+  React.InputHTMLAttributes<HTMLInputElement>,
+  "id" | "value" | "onChange" | "type" | "min" | "max" | "disabled"
+>;
 export function Counter({
-  value,
   id,
+  value,
   increment,
   decrement,
-  label,
+  min,
   max,
-  disabled = false,
+
+  label,
+
+  disabled,
+
+  className,
+  buttonClassName,
+  inputClassName,
+
+  ...props
 }: CounterProps) {
   return (
-    <div className={styles.container}>
+    <div className={styles.container + " " + (className || "")}>
       <Button
         className={
-          styles.button + " " + (disabled ? styles.buttonDisabled : "")
+          styles.button +
+          " " +
+          (disabled ? styles.buttonDisabled : "") +
+          " " +
+          (buttonClassName || "")
         }
         onClick={() => {
-          if (value > 0) {
+          if (min === undefined || value > min) {
             decrement();
           }
         }}
@@ -39,12 +62,17 @@ export function Counter({
         value={value}
         label={label}
         disabled={disabled}
-        className={styles.input}
+        className={styles.input + " " + (inputClassName || "")}
         type="number"
+        {...props}
       />
       <Button
         className={
-          styles.button + " " + (disabled ? styles.buttonDisabled : "")
+          styles.button +
+          " " +
+          (disabled ? styles.buttonDisabled : "") +
+          " " +
+          (buttonClassName || "")
         }
         onClick={() => {
           if (max === undefined || value < max) {
