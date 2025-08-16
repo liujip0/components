@@ -4,18 +4,28 @@ type DialogProps = {
   open: boolean;
   onClose?: () => void;
   children?: React.ReactNode;
+
+  backdropClassName?: string;
+  dialogClassName?: string;
 };
-export function Dialog({ open, onClose, children }: DialogProps) {
+export function Dialog({
+  open,
+  onClose,
+  children,
+
+  backdropClassName,
+  dialogClassName,
+}: DialogProps) {
   return open ?
       <div
-        className={styles.screenDarken}
+        className={styles.screenDarken + " " + (backdropClassName || "")}
         onClick={() => {
           if (onClose) {
             onClose();
           }
         }}>
         <div
-          className={styles.dialog}
+          className={styles.dialog + " " + (dialogClassName || "")}
           onClick={(event) => {
             event.stopPropagation();
           }}>
@@ -27,21 +37,37 @@ export function Dialog({ open, onClose, children }: DialogProps) {
 
 type DialogTitleProps = {
   children: React.ReactNode;
+
+  className?: string;
 };
-export function DialogTitle({ children }: DialogTitleProps) {
-  return <h2 className={styles.dialogTitle}>{children}</h2>;
+export function DialogTitle({ children, className }: DialogTitleProps) {
+  return (
+    <h2 className={styles.dialogTitle + " " + (className || "")}>{children}</h2>
+  );
 }
 
 type DialogContentProps = {
   children: React.ReactNode;
+
+  className?: string;
 };
-export function DialogContent({ children }: DialogContentProps) {
-  return <div className={styles.dialogContent}>{children}</div>;
+export function DialogContent({ children, className }: DialogContentProps) {
+  return (
+    <div className={styles.dialogContent + " " + (className || "")}>
+      {children}
+    </div>
+  );
 }
 
 type DialogActionsProps = {
   children: React.ReactNode;
+
+  className?: string;
 };
-export function DialogActions({ children }: DialogActionsProps) {
-  return <div className={styles.dialogActions}>{children}</div>;
+export function DialogActions({ children, className }: DialogActionsProps) {
+  return (
+    <div className={styles.dialogActions + " " + (className || "")}>
+      {children}
+    </div>
+  );
 }
