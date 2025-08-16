@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { IconButton } from "../../main.ts";
+import { IconButton } from "../Button/IconButton/IconButton.tsx";
 import { Input, type InputProps } from "./Input.tsx";
 
 export function Password({ ...props }: Omit<InputProps, "type" | "endIcon">) {
