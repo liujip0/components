@@ -6,18 +6,24 @@ type ToggleButtonGroupProps = {
   value: string;
   onChange: (value: string) => void;
   children?: React.ReactNode;
+
   label?: string;
-  error?: boolean;
   helperText?: string;
+
+  error?: boolean;
+
   className?: string;
 };
 export function ToggleButtonGroup({
   value,
   onChange,
   children,
+
   label,
-  error,
   helperText,
+
+  error,
+
   className,
 }: ToggleButtonGroupProps) {
   const childrenWithProps = React.Children.map(children, (child) => {

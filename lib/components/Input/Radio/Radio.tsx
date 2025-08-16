@@ -4,7 +4,6 @@ import styles from "./Radio.module.css";
 export type RadioProps = {
   id: string;
   value: string;
-  selected?: boolean;
   onChange?: (value: boolean) => void;
 
   label?: string | React.ReactNode;
@@ -16,9 +15,25 @@ export type RadioProps = {
   React.InputHTMLAttributes<HTMLInputElement>,
   "id" | "value" | "selected" | "onChange" | "className"
 >;
-export function Radio({
+
+export type RadioPropsAsChild = {
+  selected?: boolean;
+} & RadioProps;
+
+export function RadioInternal({
   id,
-  selected,
+  onChange,
+
+  label,
+
+  className,
+  buttonClassName,
+  labelClassName,
+}: RadioProps): React.ReactNode;
+export function RadioInternal({ selected }: RadioPropsAsChild): React.ReactNode;
+
+export function RadioInternal({
+  id,
   onChange,
 
   label,
@@ -28,17 +43,17 @@ export function Radio({
   labelClassName,
 
   ...props
-}: RadioProps) {
+}: RadioProps | RadioPropsAsChild) {
   return (
     <div className={styles.container + " " + (className || "")}>
       <IconButton
         className={buttonClassName || ""}
         onClick={() => {
-          if (onChange) {
-            onChange(!selected);
+          if (onChange && "selected" in props) {
+            onChange(!props.selected);
           }
         }}>
-        {selected ?
+        {"selected" in props && props.selected ?
           <span className="material-symbols-outlined">
             radio_button_checked
           </span>
@@ -49,7 +64,7 @@ export function Radio({
         <input
           type="radio"
           id={id}
-          checked={selected}
+          checked={"selected" in props && props.selected}
           onChange={(event) => {
             if (onChange) {
               onChange(event.currentTarget.checked);
@@ -68,4 +83,8 @@ export function Radio({
       )}
     </div>
   );
+}
+
+export function Radio({ ...props }: RadioProps) {
+  return <RadioInternal {...props} />;
 }

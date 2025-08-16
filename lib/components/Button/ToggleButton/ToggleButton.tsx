@@ -1,41 +1,45 @@
+import type React from "react";
+import { omit } from "../../../utils/omit.ts";
 import { Button } from "../Button.tsx";
 import styles from "./ToggleButton.module.css";
 
-type ToggleButtonProps = {
+export type ToggleButtonProps = {
+  ref?: React.Ref<HTMLButtonElement>;
   children?: React.ReactNode;
+
   className?: string;
   classNameTrue?: string;
   classNameFalse?: string;
-  disabled?: boolean;
-  ref?: React.Ref<HTMLButtonElement>;
-};
-type ToggleButtonPropsAsStandalone = {
+} & Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "ref" | "className">;
+
+export type ToggleButtonPropsAsStandalone = {
   value: boolean;
   onChange: (value: boolean) => void;
-} & ToggleButtonProps;
+} & Omit<ToggleButtonProps, "value" | "onChange" | "onClick">;
 export type ToggleButtonPropsAsChild = {
   value: string;
   selected?: boolean;
   onClick?: () => void;
-} & ToggleButtonProps;
-export function ToggleButton({
-  value,
-  onClick,
-  children,
-}: ToggleButtonPropsAsChild): React.ReactNode;
+} & Omit<ToggleButtonProps, "value" | "onClick" | "onChange">;
+
 export function ToggleButton({
   value,
   onChange,
-  children,
 }: ToggleButtonPropsAsStandalone): React.ReactNode;
 export function ToggleButton({
   value,
+  onClick,
+}: ToggleButtonPropsAsChild): React.ReactNode;
+
+export function ToggleButton({
+  ref,
+  value,
   children,
+
   className,
   classNameTrue,
   classNameFalse,
-  disabled,
-  ref,
+
   ...props
 }: ToggleButtonPropsAsStandalone | ToggleButtonPropsAsChild): React.ReactNode {
   return (
@@ -51,13 +55,13 @@ export function ToggleButton({
         (className || "")
       }
       onClick={() => {
-        if ("onChange" in props && props.onChange !== undefined) {
+        if ("onChange" in props && props.onChange) {
           props.onChange(!value);
-        } else if ("onClick" in props && props.onClick !== undefined) {
+        } else if ("onClick" in props && props.onClick) {
           props.onClick();
         }
       }}
-      disabled={disabled}>
+      {...("onChange" in props ? omit(props, ["onChange"]) : props)}>
       {children}
     </Button>
   );

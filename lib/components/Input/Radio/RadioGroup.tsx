@@ -1,5 +1,5 @@
 import React from "react";
-import type { RadioProps } from "./Radio.tsx";
+import type { RadioProps, RadioPropsAsChild } from "./Radio.tsx";
 import styles from "./RadioGroup.module.css";
 
 type RadioGroupProps = {
@@ -40,7 +40,7 @@ export function RadioGroup({
             onChange("");
           }
         },
-      } as RadioProps);
+      } as RadioPropsAsChild);
     } else {
       return child;
     }

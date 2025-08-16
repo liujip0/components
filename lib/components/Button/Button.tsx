@@ -1,11 +1,12 @@
 import styles from "./Button.module.css";
 
 type ButtonProps = {
-  children?: React.ReactNode;
-  className?: string;
   ref?: React.Ref<HTMLButtonElement>;
-} & React.ButtonHTMLAttributes<HTMLButtonElement>;
-export function Button({ children, className, ref, ...props }: ButtonProps) {
+  children?: React.ReactNode;
+
+  className?: string;
+} & Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "className">;
+export function Button({ ref, children, className, ...props }: ButtonProps) {
   return (
     <button
       ref={ref}
