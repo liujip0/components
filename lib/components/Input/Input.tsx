@@ -1,6 +1,6 @@
 import styles from "./Input.module.css";
 
-type InputProps = {
+export type InputProps = {
   id: string;
   value: string | number;
   onChange?: (value: string) => void;
