@@ -2,26 +2,37 @@ import { IconButton } from "../../Button/IconButton/IconButton.tsx";
 import styles from "./Radio.module.css";
 
 export type RadioProps = {
-  selected?: boolean;
-  onChange?: (value: boolean) => void;
   id: string;
   value: string;
-  name?: string;
+  selected?: boolean;
+  onChange?: (value: boolean) => void;
+
   label?: string | React.ReactNode;
+
   className?: string;
-};
+  buttonClassName?: string;
+  labelClassName?: string;
+} & Omit<
+  React.InputHTMLAttributes<HTMLInputElement>,
+  "id" | "value" | "selected" | "onChange" | "className"
+>;
 export function Radio({
+  id,
   selected,
   onChange,
-  name,
-  id,
+
   label,
+
   className,
+  buttonClassName,
+  labelClassName,
+
+  ...props
 }: RadioProps) {
   return (
-    <div className={styles.container}>
+    <div className={styles.container + " " + (className || "")}>
       <IconButton
-        className={className}
+        className={buttonClassName || ""}
         onClick={() => {
           if (onChange) {
             onChange(!selected);
@@ -37,7 +48,6 @@ export function Radio({
         }
         <input
           type="radio"
-          name={name}
           id={id}
           checked={selected}
           onChange={(event) => {
@@ -46,12 +56,13 @@ export function Radio({
             }
           }}
           hidden
+          {...props}
         />
       </IconButton>
       {label && (
         <label
           htmlFor={id}
-          className={styles.label}>
+          className={styles.label + " " + (labelClassName || "")}>
           {label}
         </label>
       )}

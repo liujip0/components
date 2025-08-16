@@ -3,24 +3,30 @@ import type { RadioProps } from "./Radio.tsx";
 import styles from "./RadioGroup.module.css";
 
 type RadioGroupProps = {
-  children?: React.ReactNode;
   name: string;
-  label?: string;
-  error?: boolean;
-  helperText?: string;
-  className?: string;
   value: string;
   onChange: (value: string) => void;
+  children?: React.ReactNode;
+
+  label?: string;
+  helperText?: string;
+
+  error?: boolean;
+
+  className?: string;
 };
 export function RadioGroup({
-  children,
   name,
-  label,
-  error,
-  helperText,
-  className,
   value,
   onChange,
+  children,
+
+  label,
+  helperText,
+
+  error,
+
+  className,
 }: RadioGroupProps) {
   const childrenWithProps = React.Children.map(children, (child) => {
     if (React.isValidElement<RadioProps>(child)) {
