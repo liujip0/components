@@ -22,16 +22,16 @@ export type ToggleButtonPropsAsChild = {
   onClick?: () => void;
 } & Omit<ToggleButtonProps, "value" | "onClick" | "onChange">;
 
-export function ToggleButton({
+export function ToggleButtonInternal({
   value,
   onChange,
 }: ToggleButtonPropsAsStandalone): React.ReactNode;
-export function ToggleButton({
+export function ToggleButtonInternal({
   value,
   onClick,
 }: ToggleButtonPropsAsChild): React.ReactNode;
 
-export function ToggleButton({
+export function ToggleButtonInternal({
   ref,
   value,
   children,
@@ -65,4 +65,16 @@ export function ToggleButton({
       {children}
     </Button>
   );
+}
+
+export function ToggleButton({
+  ...props
+}:
+  | ToggleButtonPropsAsStandalone
+  | Omit<ToggleButtonPropsAsChild, "selected" | "onClick">) {
+  if ("onChange" in props) {
+    return <ToggleButtonInternal {...props} />;
+  } else {
+    return <ToggleButtonInternal {...props} />;
+  }
 }
