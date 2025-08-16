@@ -1,32 +1,42 @@
 import styles from "./Input.module.css";
 
 type TextAreaProps = {
+  id: string;
   value: string | number;
   onChange?: (value: string) => void;
-  id: string;
+
   label?: string;
-  error?: boolean;
   helperText?: string;
+
+  error?: boolean;
   disabled?: boolean;
+
   className?: string;
   outlineClassName?: string;
+  textAreaClassName?: string;
   labelClassName?: string;
   helperTextClassName?: string;
-  textAreaClassName?: string;
-} & React.TextareaHTMLAttributes<HTMLTextAreaElement>;
+} & Omit<
+  React.TextareaHTMLAttributes<HTMLTextAreaElement>,
+  "id" | "value" | "onChange" | "disabled" | "className"
+>;
 export function TextArea({
+  id,
   value,
   onChange,
-  id,
+
   label,
-  error,
   helperText,
+
+  error,
   disabled,
+
   className,
   outlineClassName,
+  textAreaClassName,
   labelClassName,
   helperTextClassName,
-  textAreaClassName,
+
   ...props
 }: TextAreaProps) {
   return (

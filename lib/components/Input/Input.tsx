@@ -1,38 +1,48 @@
 import styles from "./Input.module.css";
 
 type InputProps = {
+  id: string;
   value: string | number;
   onChange?: (value: string) => void;
   type?: "text" | "password" | "email" | "number" | "search";
-  id: string;
+
+  label?: string;
+  helperText?: string;
   startIcon?: React.ReactNode;
   endIcon?: React.ReactNode;
-  label?: string;
+
   error?: boolean;
-  helperText?: string;
   disabled?: boolean;
+
   className?: string;
   outlineClassName?: string;
+  inputClassName?: string;
   labelClassName?: string;
   helperTextClassName?: string;
-  inputClassName?: string;
-} & React.InputHTMLAttributes<HTMLInputElement>;
+} & Omit<
+  React.InputHTMLAttributes<HTMLInputElement>,
+  "id" | "value" | "onChange" | "type" | "disabled" | "className"
+>;
 export function Input({
+  id,
   value,
   onChange,
   type = "text",
-  id,
+
+  label,
+  helperText,
   startIcon,
   endIcon,
-  label,
+
   error,
-  helperText,
   disabled,
+
   className,
   outlineClassName,
+  inputClassName,
   labelClassName,
   helperTextClassName,
-  inputClassName,
+
   ...props
 }: InputProps) {
   return (
