@@ -3,17 +3,27 @@ import styles from "./Snackbar.module.css";
 
 type SnackbarProps = {
   open: boolean;
-  autoHideDuration?: number;
   onClose?: () => void;
+  autoHideDuration?: number;
+
   message?: string;
   action?: React.ReactNode;
+
+  className?: string;
+  messageClassName?: string;
+  actionClassName?: string;
 };
 export function Snackbar({
   open,
-  autoHideDuration,
   onClose,
+  autoHideDuration,
+
   message,
   action,
+
+  className,
+  messageClassName,
+  actionClassName,
 }: SnackbarProps) {
   useEffect(() => {
     if (open && autoHideDuration && onClose) {
@@ -25,9 +35,11 @@ export function Snackbar({
   }, [open, autoHideDuration, onClose]);
 
   return open ?
-      <div className={styles.snackbar}>
-        <p className={styles.message}>{message}</p>
-        <div>{action}</div>
+      <div className={styles.snackbar + " " + (className || "")}>
+        <p className={styles.message + " " + (messageClassName || "")}>
+          {message}
+        </p>
+        <div className={actionClassName || ""}>{action}</div>
       </div>
     : <></>;
 }
