@@ -2,6 +2,7 @@ import styles from "./Table.module.css";
 
 type TableProps = {
   children?: React.ReactNode;
+
   className?: string;
 };
 export function Table({ children, className }: TableProps) {
@@ -12,21 +13,31 @@ export function Table({ children, className }: TableProps) {
 
 type TableHeadProps = {
   children?: React.ReactNode;
+
+  className?: string;
 };
-export function TableHead({ children }: TableHeadProps) {
-  return <thead className={styles.tableHead}>{children}</thead>;
+export function TableHead({ children, className }: TableHeadProps) {
+  return (
+    <thead className={styles.tableHead + " " + (className || "")}>
+      {children}
+    </thead>
+  );
 }
 
 type ThProps = {
   children?: React.ReactNode;
+
+  className?: string;
 };
-export function Th({ children }: ThProps) {
-  return <th className={styles.th}>{children}</th>;
+export function Th({ children, className }: ThProps) {
+  return <th className={styles.th + " " + (className || "")}>{children}</th>;
 }
 
 type TdProps = {
   children?: React.ReactNode;
+
+  className?: string;
 };
-export function Td({ children }: TdProps) {
-  return <td className={styles.td}>{children}</td>;
+export function Td({ children, className }: TdProps) {
+  return <td className={styles.td + " " + (className || "")}>{children}</td>;
 }

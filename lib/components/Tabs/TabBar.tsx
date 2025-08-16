@@ -6,8 +6,10 @@ type TabBarProps = {
   value: string;
   onChange: (value: string) => void;
   children: React.ReactNode;
+
+  className?: string;
 };
-export function TabBar({ value, onChange, children }: TabBarProps) {
+export function TabBar({ value, onChange, children, className }: TabBarProps) {
   const childrenWithProps = React.Children.map(children, (child) => {
     if (React.isValidElement<TabProps>(child)) {
       return React.cloneElement(child, {
@@ -21,5 +23,9 @@ export function TabBar({ value, onChange, children }: TabBarProps) {
     }
   });
 
-  return <div className={styles.tabBar}>{childrenWithProps}</div>;
+  return (
+    <div className={styles.tabBar + " " + (className || "")}>
+      {childrenWithProps}
+    </div>
+  );
 }

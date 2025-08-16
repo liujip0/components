@@ -2,18 +2,20 @@ import styles from "./Tab.module.css";
 
 export type TabProps = {
   value: string;
-  children: React.ReactNode;
   selected?: boolean;
   onClick?: () => void;
+  children: React.ReactNode;
+
   className?: string;
-  style?: React.CSSProperties;
-};
+} & Omit<React.HTMLAttributes<HTMLDivElement>, "className" | "onClick">;
 export function Tab({
-  children,
   selected,
   onClick,
+  children,
+
   className,
-  style,
+
+  ...props
 }: TabProps) {
   return (
     <div
@@ -25,7 +27,7 @@ export function Tab({
         (selected ? styles.activeTab : "")
       }
       onClick={onClick}
-      style={style}>
+      {...props}>
       {children}
     </div>
   );
