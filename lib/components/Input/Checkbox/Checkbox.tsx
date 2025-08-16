@@ -2,23 +2,36 @@ import { IconButton } from "../../Button/IconButton/IconButton.tsx";
 import styles from "./Checkbox.module.css";
 
 type CheckboxProps = {
+  id: string;
   value: boolean;
   onChange: (value: boolean) => void;
-  id: string;
+
   label?: string | React.ReactNode;
+
   className?: string;
-};
+  buttonClassName?: string;
+  labelClassName?: string;
+} & Omit<
+  React.InputHTMLAttributes<HTMLInputElement>,
+  "id" | "value" | "onChange" | "className"
+>;
 export function Checkbox({
+  id,
   value,
   onChange,
-  id,
+
   label,
+
   className,
+  buttonClassName,
+  labelClassName,
+
+  ...props
 }: CheckboxProps) {
   return (
-    <div className={styles.container}>
+    <div className={styles.container + " " + (className || "")}>
       <IconButton
-        className={className}
+        className={buttonClassName || ""}
         onClick={() => {
           onChange(!value);
         }}>
@@ -36,12 +49,13 @@ export function Checkbox({
             onChange(event.currentTarget.checked);
           }}
           hidden
+          {...props}
         />
       </IconButton>
       {label && (
         <label
           htmlFor={id}
-          className={styles.label}>
+          className={styles.label + " " + (labelClassName || "")}>
           {label}
         </label>
       )}
