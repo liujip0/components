@@ -3,8 +3,10 @@ import styles from "./Backdrop.module.css";
 type BackdropProps = {
   open: boolean;
   onClose?: () => void;
+
+  className?: string;
 };
-export function Backdrop({ open, onClose }: BackdropProps) {
+export function Backdrop({ open, onClose, className }: BackdropProps) {
   return open ?
       <div
         onClick={() => {
@@ -12,6 +14,6 @@ export function Backdrop({ open, onClose }: BackdropProps) {
             onClose();
           }
         }}
-        className={styles.backdrop}></div>
+        className={styles.backdrop + " " + (className || "")}></div>
     : <></>;
 }
