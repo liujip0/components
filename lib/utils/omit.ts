@@ -10,6 +10,3 @@ export function omit<T extends object, K extends keyof T>(
   }
   return newObj as Omit<T, K>;
 }
-
-const result = omit({ a: 1, b: 2, c: 3 }, ["b", "c"]);
-console.log(result); // { a: 1 }
