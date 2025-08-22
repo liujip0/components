@@ -4,7 +4,20 @@ export type InputProps = {
   id: string;
   value: string | number;
   onChange?: (value: string) => void;
-  type?: "text" | "password" | "email" | "number" | "search";
+  type?:
+    | "text"
+    | "password"
+    | "email"
+    | "number"
+    | "search"
+    | "date"
+    | "datetime-local"
+    | "month"
+    | "tel"
+    | "time"
+    | "url"
+    | "week"
+    | "datetime";
 
   label?: string;
   helperText?: string;
