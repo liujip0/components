@@ -22,6 +22,7 @@ export { Divider } from "./components/Divider/Divider.tsx";
 
 // ./Input
 export { Input } from "./components/Input/Input.tsx";
+export { Password } from "./components/Input/Password.tsx";
 export { TextArea } from "./components/Input/TextArea.tsx";
 // ./Input/Checkbox
 export { Checkbox } from "./components/Input/Checkbox/Checkbox.tsx";
