@@ -57,7 +57,7 @@
   font-size: var(--text-helperText-size, var(--text-helperText-size-fallback));
   color: var(--color-primary, var(--color-primary-fallback));
 }
-.helperTextError {
+p.helperTextError {
   color: var(--color-error, var(--color-error-fallback));
 }
 
