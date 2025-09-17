@@ -12,8 +12,8 @@ importers:
         specifier: ^9.35.0
         version: 9.35.0
       '@material-symbols/font-400':
-        specifier: ^0.35.1
-        version: 0.35.1
+        specifier: ^0.35.2
+        version: 0.35.2
       '@types/node':
         specifier: ^24.3.1
         version: 24.3.1
@@ -447,8 +447,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@material-symbols/font-400@0.35.1':
-    resolution: {integrity: sha512-1duMFrScS1mGTrudR8UdreWp1E2w9opFPMqikjhtnvWvgER9JD2CYQvsKLUAjM4bKZ1UQTv7lcyY348eyHTDtA==}
+  '@material-symbols/font-400@0.35.2':
+    resolution: {integrity: sha512-tcpm3tF1gM5dG4aD3X73DR9uc+xyIW9p9ULdGVhkhibqy/9XnVmZO15JwOBB3Jy2wNuDJ/4F4Ono5q6p6aNuSA==}
 
   '@microsoft/api-extractor-model@7.30.7':
     resolution: {integrity: sha512-TBbmSI2/BHpfR9YhQA7nH0nqVmGgJ0xH0Ex4D99/qBDAUpnhA2oikGmdXanbw9AWWY/ExBYIpkmY8dBHdla3YQ==}
@@ -1883,7 +1883,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@material-symbols/font-400@0.35.1': {}
+  '@material-symbols/font-400@0.35.2': {}
 
   '@microsoft/api-extractor-model@7.30.7(@types/node@24.3.1)':
     dependencies:
