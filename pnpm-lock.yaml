@@ -15,8 +15,8 @@ importers:
         specifier: ^0.35.1
         version: 0.35.1
       '@types/node':
-        specifier: ^24.3.1
-        version: 24.3.1
+        specifier: ^24.6.0
+        version: 24.6.0
       '@types/react':
         specifier: ^19.1.13
         version: 19.1.13
@@ -25,7 +25,7 @@ importers:
         version: 19.1.9(@types/react@19.1.13)
       '@vitejs/plugin-react':
         specifier: ^5.0.2
-        version: 5.0.2(vite@7.1.5(@types/node@24.3.1))
+        version: 5.0.2(vite@7.1.5(@types/node@24.6.0))
       eslint:
         specifier: ^9.35.0
         version: 9.35.0
@@ -58,13 +58,13 @@ importers:
         version: 8.43.0(eslint@9.35.0)(typescript@5.9.2)
       vite:
         specifier: ^7.1.5
-        version: 7.1.5(@types/node@24.3.1)
+        version: 7.1.5(@types/node@24.6.0)
       vite-plugin-dts:
         specifier: ^4.5.4
-        version: 4.5.4(@types/node@24.3.1)(rollup@4.50.1)(typescript@5.9.2)(vite@7.1.5(@types/node@24.3.1))
+        version: 4.5.4(@types/node@24.6.0)(rollup@4.50.1)(typescript@5.9.2)(vite@7.1.5(@types/node@24.6.0))
       vite-plugin-lib-inject-css:
         specifier: ^2.2.2
-        version: 2.2.2(vite@7.1.5(@types/node@24.3.1))
+        version: 2.2.2(vite@7.1.5(@types/node@24.6.0))
 
 packages:
 
@@ -635,8 +635,8 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
-  '@types/node@24.3.1':
-    resolution: {integrity: sha512-3vXmQDXy+woz+gnrTvuvNrPzekOi+Ds0ReMxw0LzBiK3a+1k0kQn9f2NWk+lgD4rJehFUmYy2gMhJ2ZI+7YP9g==}
+  '@types/node@24.6.0':
+    resolution: {integrity: sha512-F1CBxgqwOMc4GKJ7eY22hWhBVQuMYTtqI8L0FcszYcpYX0fzfDGpez22Xau8Mgm7O9fI+zA/TYIdq3tGWfweBA==}
 
   '@types/react-dom@19.1.9':
     resolution: {integrity: sha512-qXRuZaOsAdXKFyOhRBg6Lqqc0yay13vN7KrIg4L7N4aaHN68ma9OK3NE1BoDFgFOTfM7zg+3/8+2n8rLUH3OKQ==}
@@ -1463,8 +1463,8 @@ packages:
   ufo@1.6.1:
     resolution: {integrity: sha512-9a4/uxlTWJ4+a5i0ooc1rU7C7YOw3wT+UGqdeNNHWnOF9qcMBgLRS+4IYUqbczewFx4mLEig6gawh7X6mFlEkA==}
 
-  undici-types@7.10.0:
-    resolution: {integrity: sha512-t5Fy/nfn+14LuOc2KNYg75vZqClpAiqscVvMygNnlsHBFpSXdJaYtXMcdNLpl/Qvc3P2cB3s6lOV51nqsFq4ag==}
+  undici-types@7.13.0:
+    resolution: {integrity: sha512-Ov2Rr9Sx+fRgagJ5AX0qvItZG/JKKoBRAVITs1zk7IqZGTJUwgUr7qoYBpWwakpWilTZFM98rG/AFRocu10iIQ==}
 
   universalify@2.0.1:
     resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}
@@ -1885,23 +1885,23 @@ snapshots:
 
   '@material-symbols/font-400@0.35.1': {}
 
-  '@microsoft/api-extractor-model@7.30.7(@types/node@24.3.1)':
+  '@microsoft/api-extractor-model@7.30.7(@types/node@24.6.0)':
     dependencies:
       '@microsoft/tsdoc': 0.15.1
       '@microsoft/tsdoc-config': 0.17.1
-      '@rushstack/node-core-library': 5.14.0(@types/node@24.3.1)
+      '@rushstack/node-core-library': 5.14.0(@types/node@24.6.0)
     transitivePeerDependencies:
       - '@types/node'
 
-  '@microsoft/api-extractor@7.52.13(@types/node@24.3.1)':
+  '@microsoft/api-extractor@7.52.13(@types/node@24.6.0)':
     dependencies:
-      '@microsoft/api-extractor-model': 7.30.7(@types/node@24.3.1)
+      '@microsoft/api-extractor-model': 7.30.7(@types/node@24.6.0)
       '@microsoft/tsdoc': 0.15.1
       '@microsoft/tsdoc-config': 0.17.1
-      '@rushstack/node-core-library': 5.14.0(@types/node@24.3.1)
+      '@rushstack/node-core-library': 5.14.0(@types/node@24.6.0)
       '@rushstack/rig-package': 0.5.3
-      '@rushstack/terminal': 0.16.0(@types/node@24.3.1)
-      '@rushstack/ts-command-line': 5.0.3(@types/node@24.3.1)
+      '@rushstack/terminal': 0.16.0(@types/node@24.6.0)
+      '@rushstack/ts-command-line': 5.0.3(@types/node@24.6.0)
       lodash: 4.17.21
       minimatch: 10.0.3
       resolve: 1.22.10
@@ -2005,7 +2005,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.50.1':
     optional: true
 
-  '@rushstack/node-core-library@5.14.0(@types/node@24.3.1)':
+  '@rushstack/node-core-library@5.14.0(@types/node@24.6.0)':
     dependencies:
       ajv: 8.13.0
       ajv-draft-04: 1.0.0(ajv@8.13.0)
@@ -2016,23 +2016,23 @@ snapshots:
       resolve: 1.22.10
       semver: 7.5.4
     optionalDependencies:
-      '@types/node': 24.3.1
+      '@types/node': 24.6.0
 
   '@rushstack/rig-package@0.5.3':
     dependencies:
       resolve: 1.22.10
       strip-json-comments: 3.1.1
 
-  '@rushstack/terminal@0.16.0(@types/node@24.3.1)':
+  '@rushstack/terminal@0.16.0(@types/node@24.6.0)':
     dependencies:
-      '@rushstack/node-core-library': 5.14.0(@types/node@24.3.1)
+      '@rushstack/node-core-library': 5.14.0(@types/node@24.6.0)
       supports-color: 8.1.1
     optionalDependencies:
-      '@types/node': 24.3.1
+      '@types/node': 24.6.0
 
-  '@rushstack/ts-command-line@5.0.3(@types/node@24.3.1)':
+  '@rushstack/ts-command-line@5.0.3(@types/node@24.6.0)':
     dependencies:
-      '@rushstack/terminal': 0.16.0(@types/node@24.3.1)
+      '@rushstack/terminal': 0.16.0(@types/node@24.6.0)
       '@types/argparse': 1.0.38
       argparse: 1.0.10
       string-argv: 0.3.2
@@ -2066,9 +2066,9 @@ snapshots:
 
   '@types/json-schema@7.0.15': {}
 
-  '@types/node@24.3.1':
+  '@types/node@24.6.0':
     dependencies:
-      undici-types: 7.10.0
+      undici-types: 7.13.0
 
   '@types/react-dom@19.1.9(@types/react@19.1.13)':
     dependencies:
@@ -2171,7 +2171,7 @@ snapshots:
       '@typescript-eslint/types': 8.43.0
       eslint-visitor-keys: 4.2.1
 
-  '@vitejs/plugin-react@5.0.2(vite@7.1.5(@types/node@24.3.1))':
+  '@vitejs/plugin-react@5.0.2(vite@7.1.5(@types/node@24.6.0))':
     dependencies:
       '@babel/core': 7.28.4
       '@babel/plugin-transform-react-jsx-self': 7.27.1(@babel/core@7.28.4)
@@ -2179,7 +2179,7 @@ snapshots:
       '@rolldown/pluginutils': 1.0.0-beta.34
       '@types/babel__core': 7.20.5
       react-refresh: 0.17.0
-      vite: 7.1.5(@types/node@24.3.1)
+      vite: 7.1.5(@types/node@24.6.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -2914,7 +2914,7 @@ snapshots:
 
   ufo@1.6.1: {}
 
-  undici-types@7.10.0: {}
+  undici-types@7.13.0: {}
 
   universalify@2.0.1: {}
 
@@ -2928,9 +2928,9 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  vite-plugin-dts@4.5.4(@types/node@24.3.1)(rollup@4.50.1)(typescript@5.9.2)(vite@7.1.5(@types/node@24.3.1)):
+  vite-plugin-dts@4.5.4(@types/node@24.6.0)(rollup@4.50.1)(typescript@5.9.2)(vite@7.1.5(@types/node@24.6.0)):
     dependencies:
-      '@microsoft/api-extractor': 7.52.13(@types/node@24.3.1)
+      '@microsoft/api-extractor': 7.52.13(@types/node@24.6.0)
       '@rollup/pluginutils': 5.3.0(rollup@4.50.1)
       '@volar/typescript': 2.4.23
       '@vue/language-core': 2.2.0(typescript@5.9.2)
@@ -2941,20 +2941,20 @@ snapshots:
       magic-string: 0.30.19
       typescript: 5.9.2
     optionalDependencies:
-      vite: 7.1.5(@types/node@24.3.1)
+      vite: 7.1.5(@types/node@24.6.0)
     transitivePeerDependencies:
       - '@types/node'
       - rollup
       - supports-color
 
-  vite-plugin-lib-inject-css@2.2.2(vite@7.1.5(@types/node@24.3.1)):
+  vite-plugin-lib-inject-css@2.2.2(vite@7.1.5(@types/node@24.6.0)):
     dependencies:
       '@ast-grep/napi': 0.36.3
       magic-string: 0.30.19
       picocolors: 1.1.1
-      vite: 7.1.5(@types/node@24.3.1)
+      vite: 7.1.5(@types/node@24.6.0)
 
-  vite@7.1.5(@types/node@24.3.1):
+  vite@7.1.5(@types/node@24.6.0):
     dependencies:
       esbuild: 0.25.9
       fdir: 6.5.0(picomatch@4.0.3)
@@ -2963,7 +2963,7 @@ snapshots:
       rollup: 4.50.1
       tinyglobby: 0.2.15
     optionalDependencies:
-      '@types/node': 24.3.1
+      '@types/node': 24.6.0
       fsevents: 2.3.3
 
   vscode-uri@3.1.0: {}
