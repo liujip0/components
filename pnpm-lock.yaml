@@ -24,8 +24,8 @@ importers:
         specifier: ^7.5.1
         version: 7.5.1
       '@material-symbols/font-400':
-        specifier: ^0.39.3
-        version: 0.39.3
+        specifier: ^0.39.4
+        version: 0.39.4
       '@storybook/addon-docs':
         specifier: 10.0.8
         version: 10.0.8(@types/react@19.2.6)(esbuild@0.25.12)(rollup@4.53.2)(storybook@10.0.8(@testing-library/dom@10.4.1)(prettier@3.6.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(vite@7.2.2(@types/node@24.10.1)(jiti@2.6.1)))(vite@7.2.2(@types/node@24.10.1)(jiti@2.6.1))
@@ -543,8 +543,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@material-symbols/font-400@0.39.3':
-    resolution: {integrity: sha512-NIuWaXfNUEflGJP0s1JArRB/CBbpEwfRNwROFGGBARrnzXSE/G+fxcI8DxUwG/0rkVgavLG0RL1M45fHUde0Uw==}
+  '@material-symbols/font-400@0.39.4':
+    resolution: {integrity: sha512-zjGFS8oyS1RXFfW8oFXV200ezp8BTQ4dJ2n6NlCkN5Je1xRrosrdyqvG4tBc8w137vu5fw3Pb4vDJsE9T+zqsg==}
 
   '@mdx-js/react@3.1.1':
     resolution: {integrity: sha512-f++rKLQgUVYDAtECQ6fn/is15GkEH9+nZPM3MS0RcxVqoTfawHvDlSCH7JbMhAM6uJ32v3eXLvLmLvjGu7PTQw==}
@@ -3132,7 +3132,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@material-symbols/font-400@0.39.3': {}
+  '@material-symbols/font-400@0.39.4': {}
 
   '@mdx-js/react@3.1.1(@types/react@19.2.6)(react@19.2.0)':
     dependencies:
