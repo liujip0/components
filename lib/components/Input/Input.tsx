@@ -33,7 +33,7 @@ export type InputProps = {
   labelClassName?: string;
   helperTextClassName?: string;
 
-  ref?: React.RefObject<HTMLInputElement>;
+  ref?: React.Ref<HTMLInputElement>;
 } & Omit<
   React.InputHTMLAttributes<HTMLInputElement>,
   "id" | "value" | "onChange" | "type" | "disabled" | "className"

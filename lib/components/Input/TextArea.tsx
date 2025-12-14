@@ -17,7 +17,7 @@ type TextAreaProps = {
   labelClassName?: string;
   helperTextClassName?: string;
 
-  ref?: React.RefObject<HTMLTextAreaElement>;
+  ref?: React.Ref<HTMLTextAreaElement>;
 } & Omit<
   React.TextareaHTMLAttributes<HTMLTextAreaElement>,
   "id" | "value" | "onChange" | "disabled" | "className"
