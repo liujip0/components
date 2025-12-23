@@ -1,3 +1,4 @@
+import "@material-symbols/font-400/outlined.css";
 import React from "react";
 import type { ToggleButtonPropsAsChild } from "./ToggleButton.tsx";
 import styles from "./ToggleButtonGroup.module.css";

@@ -1,3 +1,4 @@
+import "@material-symbols/font-400/outlined.css";
 import { useEffect } from "react";
 import styles from "./Snackbar.module.css";
 

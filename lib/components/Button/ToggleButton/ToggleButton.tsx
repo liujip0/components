@@ -1,3 +1,4 @@
+import "@material-symbols/font-400/outlined.css";
 import type React from "react";
 import { omit } from "../../../utils/omit.ts";
 import { Button } from "../Button.tsx";

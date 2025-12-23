@@ -1,3 +1,4 @@
+import "@material-symbols/font-400/outlined.css";
 import { Button } from "../../Button/Button.tsx";
 import { Input } from "../Input.tsx";
 import styles from "./Counter.module.css";

@@ -1,3 +1,4 @@
+import "@material-symbols/font-400/outlined.css";
 import styles from "./Input.module.css";
 
 type TextAreaProps = {

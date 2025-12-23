@@ -1,3 +1,4 @@
+import "@material-symbols/font-400/outlined.css";
 import { IconButton } from "../../Button/IconButton/IconButton.tsx";
 import styles from "./Radio.module.css";
 

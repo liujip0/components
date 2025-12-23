@@ -1,3 +1,4 @@
+import "@material-symbols/font-400/outlined.css";
 import { useState } from "react";
 import { IconButton } from "../Button/IconButton/IconButton.tsx";
 import { Input, type InputProps } from "./Input.tsx";

@@ -1,3 +1,4 @@
+import "@material-symbols/font-400/outlined.css";
 import React from "react";
 import type { TabProps } from "./Tab.tsx";
 import styles from "./TabBar.module.css";

@@ -1,3 +1,4 @@
+import "@material-symbols/font-400/outlined.css";
 import React from "react";
 import type { RadioProps, RadioPropsAsChild } from "./Radio.tsx";
 import styles from "./RadioGroup.module.css";
