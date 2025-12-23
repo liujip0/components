@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { Button } from "./Button";
+import { IconButton } from "./IconButton";
 
 const meta = {
-  component: Button,
-} satisfies Meta<typeof Button>;
+  component: IconButton,
+} satisfies Meta<typeof IconButton>;
 
 export default meta;
 
@@ -12,6 +12,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    children: "Button",
+    children: <span className="material-symbols-outlined">visibility</span>,
   },
 };
