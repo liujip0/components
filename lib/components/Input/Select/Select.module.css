@@ -14,6 +14,7 @@
   border-style: solid;
   border-color: var(--color-primary, var(--color-primary-fallback));
   border-radius: var(--border-radius, var(--border-radius-fallback));
+  cursor: pointer;
 }
 .errorOutline {
   border-color: var(--color-error, var(--color-error-fallback));
