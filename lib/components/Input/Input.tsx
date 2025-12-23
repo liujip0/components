@@ -32,6 +32,8 @@ export type InputProps = {
   inputClassName?: string;
   labelClassName?: string;
   helperTextClassName?: string;
+
+  ref?: React.Ref<HTMLInputElement>;
 } & Omit<
   React.InputHTMLAttributes<HTMLInputElement>,
   "id" | "value" | "onChange" | "type" | "disabled" | "className"
@@ -55,6 +57,8 @@ export function Input({
   inputClassName,
   labelClassName,
   helperTextClassName,
+
+  ref,
 
   ...props
 }: InputProps) {
@@ -93,6 +97,7 @@ export function Input({
           type={type}
           id={id}
           disabled={disabled}
+          ref={ref}
           {...props}
         />
         {endIcon}

@@ -16,6 +16,8 @@ type TextAreaProps = {
   textAreaClassName?: string;
   labelClassName?: string;
   helperTextClassName?: string;
+
+  ref?: React.Ref<HTMLTextAreaElement>;
 } & Omit<
   React.TextareaHTMLAttributes<HTMLTextAreaElement>,
   "id" | "value" | "onChange" | "disabled" | "className"
@@ -36,6 +38,8 @@ export function TextArea({
   textAreaClassName,
   labelClassName,
   helperTextClassName,
+
+  ref,
 
   ...props
 }: TextAreaProps) {
@@ -72,6 +76,7 @@ export function TextArea({
           }}
           id={id}
           disabled={disabled}
+          ref={ref}
           {...props}></textarea>
       </div>
       {helperText && (
