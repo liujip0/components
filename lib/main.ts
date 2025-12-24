@@ -1,6 +1,9 @@
 import "./main.css";
 export default "./main.css";
 
+// ./Backdrop
+export { Backdrop } from "./components/Backdrop/Backdrop.tsx";
+
 // ./Button
 export { Button } from "./components/Button/Button.tsx";
 // ./Button/IconButton
