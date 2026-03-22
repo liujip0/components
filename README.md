@@ -2,6 +2,8 @@
 
 Just a simple components library for my own personal use!
 
+[![Release components package](https://github.com/liujip0/components/actions/workflows/publish-to-npm.yaml/badge.svg)](https://github.com/liujip0/components/actions/workflows/publish-to-npm.yaml)
+
 CSS variables to customize:
 
 | Variable                          | Description                                                                      | Default              |
